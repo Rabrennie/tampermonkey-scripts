@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         Clockwise Calculator
 // @namespace    http://tampermonkey.net/
-// @version      0.4
+// @version      0.5
 // @description  try to take over the world!
 // @author       You
 // @match        http://*/Clockwise/ClkCrd.htm*
 // @grant        none
-// @updateURL    https://rawgit.com/Rabrennie/12426725db5ddbfcc2cdc82e8261a531/raw/36d6b7fe41ea15ea8f18835110feed11aa8f2642/clockwise.js
-// @downloadURL    https://rawgit.com/Rabrennie/12426725db5ddbfcc2cdc82e8261a531/raw/36d6b7fe41ea15ea8f18835110feed11aa8f2642/clockwise.js
+// @updateURL    https://raw.githubusercontent.com/Rabrennie/tampermonkey-scripts/master/clockwise.js
+// @downloadURL    https://raw.githubusercontent.com/Rabrennie/tampermonkey-scripts/master/clockwise.js
 // ==/UserScript==
 
 (function() {
