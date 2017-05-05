@@ -6,8 +6,8 @@
 // @author       You
 // @match        http://*/Clockwise/ClkCrd.htm*
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/Rabrennie/tampermonkey-scripts/master/clockwise.js
-// @downloadURL    https://raw.githubusercontent.com/Rabrennie/tampermonkey-scripts/master/clockwise.js
+// @updateURL    https://rawgit.com/Rabrennie/tampermonkey-scripts/master/clockwise.js
+// @downloadURL  https://rawgit.com/Rabrennie/tampermonkey-scripts/master/clockwise.js
 // ==/UserScript==
 
 (function() {
