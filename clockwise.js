@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clockwise Calculator
 // @namespace    http://tampermonkey.net/
-// @version      0.6
+// @version      0.7
 // @description  try to take over the world!
 // @author       You
 // @match        *://*/Clockwise/ClkCrd.htm*
@@ -41,7 +41,7 @@
         }
 
         document.querySelector('#TOT_4_' + i).innerHTML = flexi;
-        var td = createTD(`total${i}`, time.hours + ':' + time.minutes);
+        var td = createTD(`estimated-total${i}`, time.hours + ':' + time.minutes);
         tableRow.appendChild(td);
     }
 
