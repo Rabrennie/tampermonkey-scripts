@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clockwise Calculator
 // @namespace    http://tampermonkey.net/
-// @version      0.7
+// @version      0.8
 // @description  try to take over the world!
 // @author       You
 // @match        *://*/Clockwise/ClkCrd.htm*
@@ -32,16 +32,17 @@
         var timeToWork= timeToWorkElems[i].innerHTML.split(':');
         var hours = parseInt(timeToWork[0]);
         var minutes = parseInt(timeToWork[1]);
-        if(time.hours >= hours && time.minutes >= minutes ) {
+
+        if((time.hours*60 + time.minutes) > (hours * 60 + minutes) ) {
             var flexiDate = new Date((new Date(0,0,0,time.hours,time.minutes)) - (new Date(0,0,0,hours,minutes)));
             flexi = flexiDate.getHours() + ':' + leftPad(flexiDate.getMinutes(), 2, "0");
         } else {
             var flexiDate = new Date((new Date(0,0,0,hours,minutes))-(new Date(0,0,0,time.hours,time.minutes)));
             flexi = '-' + flexiDate.getHours() + ':' + leftPad(flexiDate.getMinutes(), 2, "0");
         }
-
+console.log(flexi);
         document.querySelector('#TOT_4_' + i).innerHTML = flexi;
-        var td = createTD(`estimated-total${i}`, time.hours + ':' + time.minutes);
+        var td = createTD(`estimated-total${i}`, time.hours + ':' + leftPad(time.minutes, 2, "0"));
         tableRow.appendChild(td);
     }
 
@@ -91,8 +92,7 @@ function calculateTime(day) {
         total += diff.getMinutes();
     }
     var hours = Math.trunc(total/60);
-    var minutes = leftPad((total%60), 2, '0');
-
+    var minutes = (total%60);
     return { hours:hours,  minutes:minutes };
 }
 
